@@ -18,16 +18,16 @@ char chuyen_doi(int i) {
 int main() {
     int c, h_win = 0, c_win = 0;
     char human_selected, com_selected;
-    human_selected = 'b';
+    human_selected = 'd';
     srand(time(0));
     while(human_selected == 'b' || human_selected == 'd' || human_selected == 'k') {
-        printf("\nNhap ky tu (b-d-k), ky tu khac de thoat: ");scanf("%c", &human_selected);
-        if (human_selected != 'b' && human_selected != 'd' && human_selected != 'k') {
-            return 0;
-        }
         c = 1 + rand() % 3;
         com_selected = chuyen_doi(c);
-        if (human_selected == 'b') {
+        printf("\nNhap ky tu (b-d-k), ky tu khac de thoat: "); scanf("%c", &human_selected);
+        if (human_selected != 'b' && human_selected != 'd' && human_selected != 'k') {
+            break;
+        }
+        else if(human_selected == 'b') {
             if (com_selected == 'b') {
                 printf("Computer: %c", com_selected);
             }
@@ -67,7 +67,6 @@ int main() {
             }
         }
         printf("\nTy so human - computer: %d - %d", h_win, c_win);
-
     }
     return 0;
 }
