@@ -26,7 +26,7 @@ int main() {
 
     switch (month)
     {
-    case 1: 
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         if (day >= 1 && day <= 31) {
             printf("Hop le!");
         }
@@ -41,62 +41,8 @@ int main() {
         }
         else printf("Khong hop le!");
         break;
-    case 3: 
-        if (day >= 1 && day <= 31) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 4: 
+    case 4: case 6: case 9: case 11: 
         if (day >= 1 && day <= 30) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 5: 
-        if (day >= 1 && day <= 31) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 6: 
-        if (day >= 1 && day <= 30) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 7: 
-        if (day >= 1 && day <= 31) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 8: 
-        if (day >= 1 && day <= 31) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 9: 
-        if (day >= 1 && day <= 30) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 10: 
-        if (day >= 1 && day <= 31) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 11: 
-        if (day >= 1 && day <= 30) {
-            printf("Hop le!");
-        }
-        else printf("Khong hop le!");
-        break;
-    case 12: 
-        if (day >= 1 && day <= 31) {
             printf("Hop le!");
         }
         else printf("Khong hop le!");
