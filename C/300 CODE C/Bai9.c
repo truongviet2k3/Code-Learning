@@ -14,6 +14,7 @@ int main() {
 	printf("Nhap so do x cua goc(phut) : ");scanf("%d", &x_min);
 	x_rad = PI*x_min/60/180;
 	x_deg = x_min/60;
+	
 	while (x_deg >= 360) {
 		x_deg -= 360;
 	}
@@ -29,6 +30,11 @@ int main() {
 	else if(x_deg >= 270 && x_deg <360) {
 		printf("x thuoc goc phan tu thu 4");
 	}
+	// (int) ceil(x) lam tron sau dau phay vd 1.1 -> 2, 2.9 -> 34
+
+	//printf("x thuoc goc phan tu thu %d", (int)(ceil( x_deg / 90))  % 4);
+
+
 	printf("\ncos(x) = %f", cos(x_rad));
 	return 0;
 }

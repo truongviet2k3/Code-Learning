@@ -30,7 +30,7 @@ int main() {
 
 float Area(float xA, float yA, float xB, float yB, float xC, float yC) {
 	float S;
-	S = abs(xA*yB - xB*yA + xB*yC - xC*yB + xC*yA - xA*yC)/2;
+	S = fabs(xA*yB - xB*yA + xB*yC - xC*yB + xC*yA - xA*yC)/2;
 	return S;
 }
 

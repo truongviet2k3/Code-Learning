@@ -9,7 +9,7 @@ Ouput:	Loai tam giac
 int main() {
 	float a, b, c, p, S;
 	printf("Nhap 3 canh tam giac: ");scanf("%f %f %f", &a, &b, &c);
-	if(a + b <= c || b + c <= a || c + a <= b) {
+	if(a + b <= c || b + c <= a || c + a <= b || a > 0 || b > 0 || c > 0 ||) {
 		printf("Tam giac khong hop le!");
 		return 0;
 	}

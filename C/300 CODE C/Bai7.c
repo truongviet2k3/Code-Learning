@@ -7,10 +7,10 @@ Output:	giai pt ax  + b =0, xet tat ca cac truong hop
 int main() {
 	int a,b;
 	printf("Nhap a, b: ");scanf("%d %d", &a, &b);
-	if(a == 0 && b == 0) {
+	if( !a && !b) { // a == 0 <-> !a 
 		printf("Vo so nghiem");
 	}
-	else if(a == 0 && b != 0) {
+	else if( !a && b ) { // a == 0 <-> !a va b != 0 <-> b
 		printf("Vo nghiem");
 	}
 	else {

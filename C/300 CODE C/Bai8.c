@@ -12,7 +12,7 @@ int main() {
 	if(denta < 0) {
 		printf("Vo nghiem");
 	}
-	else if(denta == 0) {
+	else if(!denta) { // thay cho denta == 0
 		printf("Co nghiem kep x1 = x2 = %f", -b/(float)(2*a));
 	}
 	else 
