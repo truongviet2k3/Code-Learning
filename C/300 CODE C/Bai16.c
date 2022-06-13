@@ -23,7 +23,7 @@ int dayOfWeek(int day, int month, int year) {
     return day_of_week + 1;
 }
 
-void display_1st(int x) {
+void display_line_1(int x) {
     switch (x)
     {
     case 1:
@@ -55,21 +55,17 @@ void display_1st(int x) {
 int daysInMonth(int month, int year) {
     switch (month)
     {
-    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-        return 31;
-        break;
     case 4: case 6: case 9: case 11:
         return 30;
         break;
     case 2:
-        if(check_leap_year(year)) {
-            return 29;
-        }
-        else return 28;
+        return 28 + (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
     default:
+        return 31;
         break;
     }
 }
+
 int main() {
     int year; 
     printf ("Nhap nam: "); scanf("%d", &year);
@@ -83,18 +79,17 @@ int main() {
     for(i=1; i <= 12; i++) {
         printf("\nThang %d", i);
         printf("\n%5s %3s %3s %3s %3s %3s %3s","Sun","Mon","Tue","Wed","Thu","Fri","Sat");
-        int l1 = 
-
-
-        /*int thu_dau_thang = dayOfWeek(1,i,year); 
-        in_hang_dau_tien(thu_dau_thang);
-        int thu_dau_dong2 = 9 - thu_dau_thang;
-        int so_ngay_trong_thang = daysInMonth(i,year);
-        int so_dong =  (so_ngay_trong_thang - thu_dau_dong2)/7 + 1;
-        */
-        while(k <= ) {
-            printf("\n%5d %3d %3d %3d %3d %3d %3d",k,k+1,k+2,k+3,k+4,k+5,k+6);
-            k += 7;
+        int frist = dayOfWeek(1,i,year);
+        int days_month = daysInMonth(i,year);
+        display_line_1(frist);
+        int day_line_2 = 9 - frist; int k = day_line_2;
+        printf("\n  ");
+        for(j=day_line_2; j <= days_month; j++ ) {
+            printf("%3d ", j);
+            if((j-6) % k == 0 && (j-6)/ k == 1) {
+                printf("\n  ");
+                k += 7;
+            }
         }
     }
     return 0;
