@@ -10,7 +10,7 @@ int main() {
     int doi_tuong;
     printf("Nhap diem chuan: "); scanf("%f",&diem_chuan);
     printf("Nhap diem 3 mon thi: "); scanf("%f %f %f" , &mon1, &mon2, &mon3);
-    printf("Nhap khu vuc (A, B, C, X): "); scanf("%c", &kv);
+    printf("Nhap khu vuc (A, B, C, X): "); scanf("%s", &kv);
     printf("Nhap doi tuong (1, 2, 3, 0): "); scanf("%d", &doi_tuong);
     tong_diem = mon1 + mon2 + mon3;
     switch (kv)
