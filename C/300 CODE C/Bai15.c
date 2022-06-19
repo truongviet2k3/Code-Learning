@@ -16,7 +16,7 @@ bool check_leap_year(int year) {
 int main() {
     int day, month, year;
     printf("Nhap ngay, thang va nam: "); scanf("%d %d %d", &day, &month, &year);
-    int i=0, st = 0;
+    int i=0, st = day;
     if (month == 1) {
         printf("Ngay thu: %d", day);
         return 0;
@@ -40,6 +40,6 @@ int main() {
             break;
         }
     }
-    printf("Ngay thu: %d", day + st );
+    printf("Ngay thu: %d",st );
     return 0;
 }

@@ -11,7 +11,7 @@ bool check_leap_year(int year) {
     }
     return 0;
 }
-void yesterday_tomorrow(int day, int month, int year) {
+void yesterday_tomorrow_1(int day, int month, int year) {
     switch (month)
     {
     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -86,9 +86,19 @@ void yesterday_tomorrow(int day, int month, int year) {
     }
 }
 
+int top(int m, int y) {
+    switch (m)
+    {
+    case 4:case 6:case 9: case 11: return 30;
+    case 2: return 28 + (y % 4 == 0 && (y % 100 != || y % 400 == 0));
+    default:
+        return 31;
+    }
+}
+
 int main() {
     int day, month, year;
     printf("Nhap ngay, thang va nam: "); scanf("%d %d %d", &day, &month, &year);
-    yesterday_tomorrow(day, month, year);
+    yesterday_tomorrow_1(day, month, year);
     return 0;
 }

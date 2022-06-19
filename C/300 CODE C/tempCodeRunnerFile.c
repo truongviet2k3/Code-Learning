@@ -1,9 +1,4 @@
-#include <stdio.h>
-
-
-
-int main() {
-	unsigned int n;
+unsigned int n;
 	unsigned long long result = 0;
 	unsigned long long MODULO = 1e10;
 	int i,j;
@@ -19,5 +14,3 @@ int main() {
 	}
 	printf("%llu\n", result);
 	
-	return 0;
-}

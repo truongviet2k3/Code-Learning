@@ -6,7 +6,7 @@
 
 bool kiem_tra_so_hh(int n) {
     int sum =0, i;
-    for (i =1; i < n;i++) {
+    for (i =1; i <= n/2;i++) {
         if (n % i == 0) {
             sum += i;
         }

@@ -26,7 +26,7 @@ bool check(char c) {
     }
     return 1;
 }
-int main() {
+int cach1() {
     int c, h, h_win = 0, c_win = 0;
     char human_selected, com_selected;
     bool kt = 1;
@@ -90,5 +90,54 @@ int main() {
         }
         printf("\nTy so human - computer: %d - %d", h_win, c_win);
     }
+    return 0;
+}
+
+int cach2() {
+    char human, computer;
+    unsigned int h_win, c_win;
+
+    srand(time(NULL));
+    h_win= c_win = 0;
+
+    while (1)
+    {
+        printf("Nhap ky tu (b-d-k), ky tu khac de thoat: ");
+        scanf("%c", &human);
+        while (getchar() != '\n') {}
+        switch (human) 
+        {
+        case 'b':
+            switch (rand() % 3) {
+                case 0: computer = 'b';break;
+                case 1: computer = 'd'; h_win++;break;
+                case 2: computer = 'k'; c_win++ ;break;
+            }
+            break;
+        case 'd': 
+            switch (rand() % 3) {
+                case 0: computer = 'b'; c_win ++;break;
+                case 1: computer = 'd';break;
+                case 2: computer = 'k'; h_win++;break;
+            }
+            break;
+        case 'k':
+            switch (rand() % 3) {
+                case 0: computer = 'b'; h_win ++;break;
+                case 1: computer = 'd'; c_win ++;break;
+                case 2: computer = 'k';break;
+            }
+            break;
+        default:
+            return 0;
+        }
+        printf("Human: %c\n", human);
+        printf("Computer: %c\n", computer);
+        printf("Ty so: %u - %u\n", h_win, c_win);
+    }
+}
+
+int main() {
+    cach2();
     return 0;
 }
