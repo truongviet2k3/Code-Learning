@@ -6,8 +6,10 @@
 #include <stdbool.h>
 
 bool check_prime_number(unsigned int n) {
+    if(n < 2) return 0;
+    if(n == 2) return 1;
     int i=2;
-    for(; i <= sqrt(n); i++) {
+    for(; i <= (n >> 1) ; i++) {
         if (n % i == 0) return 0;
     }
     return 1;
