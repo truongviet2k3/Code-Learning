@@ -25,6 +25,6 @@ int main() {
     for(i = 2; i <= m; i++) {
         printf(" + %u", i);
     }
-    printf(" = %d", sum_1_to_n(m));
+    printf(" = %d < %d", sum_1_to_n(m), n);
     return 0;
 }
