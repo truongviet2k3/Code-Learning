@@ -14,7 +14,7 @@ int main() {
     int n;
     printf("Nhap n: "); scanf("%d", &n);
     int S=0;
-    S = n % 2 == 0 ? tong_chan(n) : tong_le(n);
+    S = n % 2  ? tong_le(n) : tong_chan(n);
     printf("S = %d", S);
     return 0;
 }
