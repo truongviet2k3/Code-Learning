@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 
 void nhap_mang(int A[], int n) {
     int i=0;

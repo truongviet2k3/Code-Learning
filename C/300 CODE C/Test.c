@@ -1,8 +1,15 @@
 #include <stdio.h>
+
+void test(int *pn) {
+    int n = *pn;
+    *pn += 1;
+}
+
 int main() {
-    unsigned n, i, j;
+    int n, i, j;
     printf( "Nhap n: " ); scanf("%d", &n); 
-    printf("%d ", (int)(n/2.0 - 0.5));
+    test(&n);
+    printf("%d ", n);
     
     return 0;
 }
