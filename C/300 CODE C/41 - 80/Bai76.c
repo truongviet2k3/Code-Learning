@@ -7,7 +7,8 @@ void nhap_mang(int A[], int n) {
     for(i = 0; i < n; i++) {
         scanf("%d", &A[i]);
     }
-}int main() {
+}
+int main() {
     int n, A[100],i ,j ,count, max = 1, pos = -1, oldmax = 0;
     int B[100]; 
     printf("Nhap n: "); scanf("%d", &n);

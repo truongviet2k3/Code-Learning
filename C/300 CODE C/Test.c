@@ -1,15 +1,36 @@
 #include <stdio.h>
-
-void test(int *pn) {
-    int n = *pn;
-    *pn += 1;
-}
+#include <string.h>
 
 int main() {
-    int n, i, j;
-    printf( "Nhap n: " ); scanf("%d", &n); 
-    test(&n);
-    printf("%d ", n);
-    
+    char a[255], b[255], c[255];
+    int len_a, len_b;
+    printf("Nhap a: ");fgets(a, 255, stdin);
+    len_a = strlen(a) - 1;
+    if(a[len_a] == '\n') a[len_a] = '\0';
+    printf("Nhap b: "); fgets(b, 255, stdin);
+    len_b = strlen(b) - 1;
+    if(b[len_b] == '\n') b[len_b] = '\0';
+    if(!strcmp(a, b))  printf("Giong");
+    else printf("Khac\n");
+    // strcat(a," "); strcat(a,b);
+    // strcpy(c, a); strcat(c, " "); strcat(c, "Hoc gioi");
+    // puts(a);
+    // puts(b);
+    // puts(c);
+    // strlwr(a); strupr(b);
+    // puts(a);
+    // puts(b);
+    // printf("Dao nguoc a: ");strrev(a);puts(a);
+    // printf("Dao nguoc b: ");strrev(b);puts(b);
+    // char* first, *last;
+    // first = strchr(a, 'v');
+    // last = strrchr(a, 'v');
+    // printf("[%s]\n", first);
+    // printf("[%s]\n", last);
+    // printf("%p\n%p\n%p\n%p", !first, a, last, !NULL);
+    // printf("%d", !first);
+    // printf("\n%d", last - a); 
+    strspn
     return 0;
+
 }
