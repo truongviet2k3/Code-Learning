@@ -6,7 +6,7 @@ int _strcmp(const char* p, const char* t) {
     }
     return *p - *t;
 }
-char* _strchr(char* s, int ch) {
+char* _strchr(const char* s, int ch) {
     for(; *s ; ++s) 
         if(*s == ch) return s;  
     return NULL;

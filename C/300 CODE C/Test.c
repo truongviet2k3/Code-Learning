@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main() {
     char a[255], b[255], c[255];
@@ -29,8 +30,14 @@ int main() {
     // printf("[%s]\n", last);
     // printf("%p\n%p\n%p\n%p", !first, a, last, !NULL);
     // printf("%d", !first);
-    // printf("\n%d", last - a); 
-    strspn
+    // printf("\n%d", last - a);     
+    // char* c_1 = strdup(a);
+    // printf("%s\n%d", c_1, strlen(c_1));
+    char d[] = " \t\"'?!.,";
+    char* token = strtok(a,d);
+    while(token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL,d);
+    }
     return 0;
-
 }
