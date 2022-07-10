@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("%d", '1');
+    int a;
+    int* p = &a;
+    scanf("%d", p);
+    printf("%d", *p);
     return 0;
 }
