@@ -1,9 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    int a;
-    int* p = &a;
-    scanf("%d", p);
-    printf("%d", *p);
+    printf("%-3d%-10s%-5.2f%-3c", 5,"Hello", 7.5, 'g');
     return 0;
 }
