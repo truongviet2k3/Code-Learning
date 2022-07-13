@@ -1,6 +1,7 @@
 #include <stdio.h>
-
+#include <limits.h>
 int main() {
-    printf("%-3d%-10s%-5.2f%-3c", 5,"Hello", 7.5, 'g');
+    int a = INT_MIN;
+    printf("%d", a);
     return 0;
 }

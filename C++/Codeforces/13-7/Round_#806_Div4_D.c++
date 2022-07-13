@@ -1,8 +1,9 @@
-#include <iostream>
+#include <stdio.h>
 #include <string.h>
 using namespace std;
 
 int main() {
-    cout << (int)'U';
-    return 0;
+    int n; 
+    
+    cin >> n;   
 }
