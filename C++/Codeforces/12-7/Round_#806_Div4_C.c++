@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <string.h>
 using namespace std;
-
 int find_answer(int wheels, int num_wheel[], int len[], string str[]) {
     int i, j;
     for(i = 0; i < wheels; i++) {
@@ -19,7 +18,6 @@ int find_answer(int wheels, int num_wheel[], int len[], string str[]) {
     }
     return 0;
 }
-
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
